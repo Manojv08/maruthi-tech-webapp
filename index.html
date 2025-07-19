@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruthi Tech - Leading Fabrication Solutions</title>
+    <meta name="description" content="Maruthi Tech specializes in high-quality stainless steel and mild steel fabrication with custom solutions and machine erection services in Chennai.">
+    <meta name="keywords" content="stainless steel fabrication, mild steel fabrication, Chennai, custom fabrication, machine erection, welding services">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Maruthi Tech - Leading Fabrication Solutions">
+    <meta property="og:description" content="Specialized in high-quality stainless steel and mild steel fabrication with custom solutions since 2009.">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border-light: #e5e7eb;
+            --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-soft);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300"><path d="M0,300V230c0,0,300-30,500,0s500,30,500,30v70H0z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat center bottom;
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.2s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Image Carousel */
+        .carousel-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-primary);
+            color: var(--white);
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--white);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-nav:hover {
+            background: var(--white);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .carousel-nav.prev {
+            left: 20px;
+        }
+
+        .carousel-nav.next {
+            right: 20px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .mission-vision {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .mission-vision-item {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .mission-vision-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Core Values */
+        .values {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: var(--bg-light);
+            transition: all 0.3s ease;
+        }
+
+        .value-item:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .value-item i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .value-item:hover i {
+            color: var(--white);
+        }
+
+        .value-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Technology Section */
+        .technology {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .tech-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .tech-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tech-list i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .contact-form {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: var(--shadow-medium);
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-content,
+            .tech-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .carousel-nav.prev {
+                left: 10px;
+            }
+
+            .carousel-nav.next {
+                right: 10px;
+            }
+
+            .carousel-wrapper {
+                height: 300px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scale-on-hover {
+            transition: transform 0.3s ease;
+        }
+
+        .scale-on-hover:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-industry"></i>
+                    Maruthi Tech
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Leading Fabrication Solutions</h1>
+                <p>Specializing in high-quality stainless steel and mild steel fabrication with precision and excellence since 2009</p>
+                <a href="#contact" class="cta-button">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section id="gallery" class="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Our Work Gallery</h2>
+            <p class="section-subtitle">Showcasing our precision fabrication and quality craftsmanship</p>
+            
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <div>
+                            <h3>Stainless Steel Fabrication</h3>
+                            <p>High-quality SS fabrication projects</p>
+                            <!-- Replace with actual image: <img src="path/to/image1.jpg" alt="Stainless Steel Fabrication"> -->
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div>
+                            <h3>Machine Erection</h3>
+                            <p>Professional on-site machine installation</p>
+                            <!-- Replace with actual image: <img src="path/to/image2.jpg" alt="Machine Erection"> -->
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div>
+                            <h3>Mild Steel Works</h3>
+                            <p>Precision mild steel fabrication</p>
+                            <!-- Replace with actual image: <img src="path/to/image3.jpg" alt="Mild Steel Works"> -->
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div>
+                            <h3>RO Skid Systems</h3>
+                            <p>Custom RO skid fabrication</p>
+                            <!-- Replace with actual image: <img src="path/to/image4.jpg" alt="RO Skid Systems"> -->
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div>
+                            <h3>Filter Tanks</h3>
+                            <p>SS carbon & sand filter tanks</p>
+                            <!-- Replace with actual image: <img src="path/to/image5.jpg" alt="Filter Tanks"> -->
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div>
+                            <h3>Custom Fabrication</h3>
+                            <p>Tailored solutions for every need</p>
+                            <!-- Replace with actual image: <img src="path/to/image6.jpg" alt="Custom Fabrication"> -->
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div>
+                            <h3>Aluminium Works</h3>
+                            <p>Precision aluminium fabrication</p>
+                            <!-- Replace with actual image: <img src="path/to/image7.jpg" alt="Aluminium Works"> -->
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div>
+                            <h3>Welding Services</h3>
+                            <p>Advanced welding techniques</p>
+                            <!-- Replace with actual image: <img src="path/to/image8.jpg" alt="Welding Services"> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-nav prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-controls">
+                    <div class="carousel-dot active" onclick="currentSlide(1)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(2)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(3)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(4)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(5)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(6)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(7)"></div>
+                    <div class="carousel-dot" onclick="currentSlide(8)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Maruthi Tech</h2>
+            <p class="section-subtitle fade-in">Excellence in fabrication since 2009</p>
+            
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>Maruthi Tech is a leading manufacturer specializing in the fabrication of high-quality stainless steel and mild steel products. Our expertise lies in preparing, cutting, shaping, and welding materials to meet the exact specifications of our customers.</p>
+                    
+                    <p>With a commitment to precision and efficiency, we provide customized solutions, including the erection and installation of machines at customer sites. At Maruthi Tech, we pride ourselves on delivering exceptional craftsmanship and innovative fabrication services, ensuring customer satisfaction and cost efficiency.</p>
+                </div>
+                
+                <div class="mission-vision fade-in">
+                    <div class="mission-vision-item">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>To deliver high-quality, customized fabrication solutions with efficiency and precision, meeting the exact needs of our customers.</p>
+                    </div>
+                    
+                    <div class="mission-vision-item">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To be the leading provider of innovative and reliable fabrication services, recognised for our excellence in craftsmanship and customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Services</h2>
+            <p class="section-subtitle fade-in">Comprehensive fabrication solutions tailored to your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in scale-on-hover">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Custom Fabrication</h3>
+                    <p>Preparation, cutting, shaping, and welding using advanced welding machines and power tools to fabricate products as per customer specifications.</p>
+                </div>
+                
+                <div class="service-card fade-in scale-on-hover">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Machine Erection</h3>
+                    <p>Professional on-site erection and installation of machines at the customer's location with precision and efficiency.</p>
+                </div>
+                
+                <div class="service-card fade-in scale-on-hover">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>All kinds of Stainless Steel (SS), Mild Steel (MS) & Aluminium Fabrications. Specializing in SS RO skid, filter tanks, and custom housing solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Core Values</h2>
+            <p class="section-subtitle fade-in">The principles that drive our excellence</p>
+            
+            <div class="values-grid">
+                <div class="value-item fade-in">
+                    <i class="fas fa-award"></i>
+                    <h3>Quality</h3>
+                    <p>Uncompromising standards in every project</p>
+                </div>
+                
+                <div class="value-item fade-in">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Cutting-edge solutions and techniques</p>
+                </div>
+                
+                <div class="value-item fade-in">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Exceeding expectations every time</p>
+                </div>
+                
+                <div class="value-item fade-in">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integrity</h3>
+                    <p>Honest and transparent business practices</p>
+                </div>
+                
+                <div class="value-item fade-in">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Efficiency</h3>
+                    <p>Optimized processes for timely delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology">
+        <div class="container">
+            <h2 class="section-title fade-in">Technology & Innovation</h2>
+            <p class="section-subtitle fade-in">Advanced equipment and innovative solutions</p>
+            
+            <div class="tech-content">
+                <div class="fade-in">
+                    <h3>Technologies Used</h3>
+                    <ul class="tech-list">
+                        <li>
+                            <i class="fas fa-fire"></i>
+                            <span>Advanced welding machines</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-cut"></i>
+                            <span>Power tools for precise cutting and shaping</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-wrench"></i>
+                            <span>Custom fabrication equipment</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in">
+                    <h3>Innovative Solutions</h3>
+                    <ul class="tech-list">
+                        <li>
+                            <i class="fas fa-chart-line"></i>
+                            <span>Development of cost-efficient fabrication methods</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-medal"></i>
+                            <span>Implementation of advanced welding techniques for superior quality</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Customized solutions for unique requirements</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="section-subtitle fade-in">Let's discuss your fabrication needs</p>
+            
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Contact Information</h3>
+                    <p style="margin-bottom: 2rem;">Founded in 2009, we've been serving customers with excellence for over a decade.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>131, Mettukuppam Rd, Anna Industrial Estate, Porur, Chennai, Tamil Nadu 600095</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 93828 83021<br>+91 88077 78700<br>+91 97910 57056</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>maruthitech2009@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map"></i>
+                        <div>
+                            <h4>Find Us</h4>
+                            <p><a href="https://tinyurl.com/Maruthi-Tech" target="_blank" style="color: var(--accent-color);">View on Google Maps</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <h3>Send us a Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your fabrication requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Maruthi Tech</h3>
+                    <p>Leading manufacturer specializing in high-quality stainless steel and mild steel fabrication since 2009.</p>
+                    <p style="margin-top: 1rem; font-style: italic; color: var(--accent-color);">"Anything worth having takes time."</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <p><a href="#services">Custom Fabrication</a></p>
+                    <p><a href="#services">Machine Erection</a></p>
+                    <p><a href="#services">SS & MS Manufacturing</a></p>
+                    <p><a href="#services">Aluminium Fabrication</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Specializations</h3>
+                    <p>SS RO Skid Systems</p>
+                    <p>SS Carbon & Sand Filter Tanks</p>
+                    <p>SS Square Tanks</p>
+                    <p>SS Micron Filters</p>
+                    <p>UV Filters & SS Housing</p>
+                    <p>SS Chiller Tanks</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>131, Mettukuppam Rd, Anna Industrial Estate, Porur, Chennai - 600095</p>
+                    <p>Phone: +91 93828 83021</p>
+                    <p>Email: maruthitech2009@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maruthi Tech. All rights reserved. | Designed with precision and excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Carousel Functionality
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-play carousel
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Form Submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to your server
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Lazy loading for images (when you add real images)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Performance optimization
+        let ticking = false;
+        function updateOnScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    // Scroll-based animations can be added here
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', updateOnScroll);
+    </script>
+</body>
+</html>
